@@ -1,0 +1,17 @@
+.option{
+    width:80%;
+    margin: 20px 0;
+}
+.all{
+    margin: 50px 0 0 100px;
+    border: solid 2px black;
+    width: 500px;
+    padding: 20px;
+}
+.a{
+    margin: 20px 0;
+}
+.b{
+    font-weight: 400;
+    font-size: larger;
+}

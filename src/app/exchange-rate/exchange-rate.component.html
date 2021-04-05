@@ -1,0 +1,18 @@
+<div class="all">
+<h3>Exchange Rate</h3>
+<div class="a">
+    {{exchange.base}} : <input [(ngModel)]="money" #myInput/><span style="color: red;"> ***Please fill only number***</span>
+</div>
+<div class="form-group">
+    <h5>Please Choose Unit</h5> 
+    <select class="form-control option" id="a1">
+        <option *ngFor='let unit of exchange.rates | keyvalue'
+        [value1]="unit">{{unit.key}} : {{unit.value}}/{{exchange.base}}</option>
+    </select>
+    <p class="b">{{ansvalue}}</p>
+    <button class="btn-primary btn" (click)="Convert()">Convert</button>
+    
+</div>
+</div>
+
+
