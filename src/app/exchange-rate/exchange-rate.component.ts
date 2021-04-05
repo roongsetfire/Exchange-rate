@@ -15,7 +15,7 @@ export class ExchangeRateComponent implements OnInit {
   exchange: any;
  
 
-  
+  keyvalue: string;
   ansvalue: any;
   sel: any;
   value1: string;
@@ -41,7 +41,8 @@ export class ExchangeRateComponent implements OnInit {
     
     this.sel = document.getElementById("a1");
     this.ansvalue = this.sel.options[this.sel.selectedIndex].value1.value;
-    this.ansvalue = `Unit : ${parseFloat(this.ansvalue) * parseFloat(this.money)} (EUR)`;
+    this.keyvalue = this.sel.options[this.sel.selectedIndex].value1.key;
+    this.ansvalue = `${this.keyvalue} : ${parseFloat(this.ansvalue) * parseFloat(this.money)} (EUR)`;
   }
 
   ngAfterViewInit() {
